@@ -135,7 +135,8 @@ Item {
 			cursorShape: output.hoveredLink ? Qt.PointingHandCursor : Qt.ArrowCursor
 
 			onClicked: {
-				widget.performClick()
+				timer.triggered()
+				timer.restart()
 			}
 
 			property int wheelDelta: 0
